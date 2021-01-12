@@ -1,0 +1,82 @@
+body {
+  background-color: #569ADF;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.svgBike {
+  width: 400px;
+}
+
+#tireBack,
+#tireFront {
+  animation-name: tire;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#tireBack {
+  animation-duration: 1.2s;
+}
+
+#tireFront {
+  animation-duration: 6s;
+}
+
+#bikeBack,
+#bikeFront,
+#driverHead,
+#driverBody,
+#driverHelmet {
+  animation-name: move;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#bikeBack {
+  animation-duration: .1s;
+}
+
+#bikeFront {
+  animation-duration: .2s;
+}
+
+#driverHead {
+  animation-duration: .3s;
+}
+
+#driverBody {
+  animation-duration: .4s;
+}
+
+#driverHelmet {
+  animation-duration: .5s;
+}
+
+@keyframes tire {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(6px);
+  }
+}
